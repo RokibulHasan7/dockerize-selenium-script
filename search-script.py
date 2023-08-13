@@ -38,6 +38,10 @@ for i in range(1, 11):
     except:
         pass
 
-print(links)
-
 browser.quit()
+# Write links to a text file
+with open('search_results.txt', 'w') as f:
+    for link in links:
+        f.write(link + '\n')
+
+print(links)
